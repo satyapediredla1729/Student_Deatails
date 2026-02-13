@@ -1,13 +1,13 @@
 Student_Data = {
     101:{
-        "Name":"satya",
-        "Age":19,
+        "name":"satya",
+        "age":19,
         "marks":(19,20,20),
         "section":'A',
     },
     102:{
-        "Name":"shiva",
-        "Age":19,
+        "name":"shiva",
+        "age":19,
         "marks":(15,14,20),
         "section":'B',
     }
@@ -44,9 +44,9 @@ while True:
 
                 section = input("enter your section").strip().upper()
                 Student_Data[Roll_no] = {
-                    "Name":name,
-                    "Age":age,
-                    "Marks":marks,
+                    "name":name,
+                    "age":age,
+                    "marks":marks,
                     "section":section
                 }
                 print("student added successfully!")
@@ -59,20 +59,20 @@ while True:
             print("student_details")
             for Roll_no,details in Student_Data.items():
                 print("Roll no",Roll_no)
-                print("Name",details["Name"])
-                print("Age",details["Age"])
-                print("Marks",details["marks"])
-                print("Section",details["section"])
+                print("name",details["name"])
+                print("age",details["age"])
+                print("marks",details["marks"])
+                print("section",details["section"])
     elif choice == 3:
         try:
             Roll_no = int(input("enter your Roll no:"))
             if Roll_no in Student_Data:
                 details = Student_Data[Roll_no]
                 print("Roll no", Roll_no)
-                print("Name", details["Name"])
-                print("Age", details["Age"])
-                print("Marks", details["marks"])
-                print("Section", details["section"])
+                print("name", details["name"])
+                print("age", details["age"])
+                print("marks", details["marks"])
+                print("section", details["section"])
             else:
                 print("student details not found")
         except ValueError:
@@ -100,7 +100,7 @@ while True:
                     topper_roll_no = Roll_no
                     topper = Student_Data[topper_roll_no]
                     print("Roll no",topper_roll_no)
-                    print("Name",topper["Name"])
+                    print("name",topper["name"])
                     print("total marks",max_marks)
     elif choice == 6:
         if not Student_Data:
@@ -115,6 +115,7 @@ while True:
     elif choice == 7:
         print("Exiting Program....")
         break
+
 
 
 
